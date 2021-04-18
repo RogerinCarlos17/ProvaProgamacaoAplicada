@@ -1,0 +1,301 @@
+#include <iostream>
+#include <fstream>
+#include <clocale>
+
+using namespace std;
+
+int main(){
+
+
+    int bin1,bin2;
+    string OP;
+
+
+    int vet1[8];
+    int vet2[8];
+    int vet3[8];
+    int i;
+    int soma1,soma2,soma3,soma4,soma5,soma6,soma7,soma8,somaVet1,SomaTotal;
+    int soma9,soma10,soma11,soma12,soma13,soma14,soma15,soma16,somaVet2;
+
+
+
+    cout << "Informe a operacao matematica desejada(soma,subtracao,multiplicacao,divisao): ";
+    cin >> OP ;
+
+    if(OP=="soma"){
+    for(int i=0;i<8;i++){
+    cout << "Informe o primeiro numero em binario digito a digito: ";
+    cin >> vet1[i] ;
+
+    }
+
+    soma1 = (1)*vet1[7];
+    soma2 = (2)*vet1[6];
+    soma3 = (4)*vet1[5];
+    soma4 = (8)*vet1[4];
+    soma5 = (16)*vet1[3];
+    soma6 = (32)*vet1[2];
+    soma7 = (64)*vet1[1];
+    soma8 = (128)*vet1[0];
+
+    somaVet1=soma1+soma2+soma3+soma4+soma5+soma6+soma7+soma8;
+
+    for(int i=0;i<8;i++){
+    cout << "Informe o segundo numero em binario digito a digito: ";
+    cin >> vet2[i] ;
+    }
+    soma9 = (1)*vet2[7];
+    soma10 = (2)*vet2[6];
+    soma11 = (4)*vet2[5];
+    soma12 = (8)*vet2[4];
+    soma13 = (16)*vet2[3];
+    soma14 = (32)*vet2[2];
+    soma15 = (64)*vet2[1];
+    soma16 = (128)*vet2[0];
+
+    somaVet2=soma9+soma10+soma11+soma12+soma13+soma14+soma15+soma16;
+
+    SomaTotal= somaVet1+somaVet2;
+
+    int vetFinal[9];
+    int a;
+    int num;
+
+    for(int a=8;a>=0;a--){
+
+    if(SomaTotal % 2 ==0){
+
+       vetFinal[a] = 0;
+       SomaTotal=SomaTotal/2;
+
+       }else{
+
+        vetFinal[a] = 1;
+        SomaTotal=SomaTotal/2;
+    }
+
+    }
+
+
+
+    cout << vetFinal[0]<<endl;
+    cout << vetFinal[1]<<endl;
+    cout << vetFinal[2]<<endl;
+    cout << vetFinal[3]<<endl;
+    cout << vetFinal[4]<<endl;
+    cout << vetFinal[5]<<endl;
+    cout << vetFinal[6]<<endl;
+    cout << vetFinal[7]<<endl;
+    cout << vetFinal[8]<<endl;
+    }
+
+        if(OP=="subtracao"){
+
+                for(int i=0;i<8;i++){
+    cout << "Informe o primeiro numero em binario digito a digito: ";
+    cin >> vet1[i] ;
+
+    }
+
+    soma1 = (1)*vet1[7];
+    soma2 = (2)*vet1[6];
+    soma3 = (4)*vet1[5];
+    soma4 = (8)*vet1[4];
+    soma5 = (16)*vet1[3];
+    soma6 = (32)*vet1[2];
+    soma7 = (64)*vet1[1];
+    soma8 = (128)*vet1[0];
+
+    somaVet1=soma1+soma2+soma3+soma4+soma5+soma6+soma7+soma8;
+
+    for(int i=0;i<8;i++){
+    cout << "Informe o segundo numero em binario digito a digito: ";
+    cin >> vet2[i] ;
+    }
+    soma9 = (1)*vet2[7];
+    soma10 = (2)*vet2[6];
+    soma11 = (4)*vet2[5];
+    soma12 = (8)*vet2[4];
+    soma13 = (16)*vet2[3];
+    soma14 = (32)*vet2[2];
+    soma15 = (64)*vet2[1];
+    soma16 = (128)*vet2[0];
+
+    somaVet2=soma9+soma10+soma11+soma12+soma13+soma14+soma15+soma16;
+
+    if(somaVet1<somaVet2){
+
+       cout<<"Subtracao impossivel de ser realizada";
+
+    }else{
+
+    SomaTotal= somaVet1-somaVet2;
+
+    int vetFinal[9];
+    int a;
+    int num;
+
+    for(int a=8;a>=0;a--){
+
+    if(SomaTotal % 2 ==0){
+
+       vetFinal[a] = 0;
+       SomaTotal=SomaTotal/2;
+
+       }else{
+
+        vetFinal[a] = 1;
+        SomaTotal=SomaTotal/2;
+    }
+
+    }
+    cout << vetFinal[0]<<endl;
+    cout << vetFinal[1]<<endl;
+    cout << vetFinal[2]<<endl;
+    cout << vetFinal[3]<<endl;
+    cout << vetFinal[4]<<endl;
+    cout << vetFinal[5]<<endl;
+    cout << vetFinal[6]<<endl;
+    cout << vetFinal[7]<<endl;
+    cout << vetFinal[8]<<endl;
+
+    }
+    }
+        if(OP=="multiplicacao"){
+
+        for(int i=0;i<8;i++){
+    cout << "Informe o primeiro numero em binario digito a digito: ";
+    cin >> vet1[i] ;
+
+    }
+
+    soma1 = (1)*vet1[7];
+    soma2 = (2)*vet1[6];
+    soma3 = (4)*vet1[5];
+    soma4 = (8)*vet1[4];
+    soma5 = (16)*vet1[3];
+    soma6 = (32)*vet1[2];
+    soma7 = (64)*vet1[1];
+    soma8 = (128)*vet1[0];
+
+    somaVet1=soma1+soma2+soma3+soma4+soma5+soma6+soma7+soma8;
+
+    for(int i=0;i<8;i++){
+    cout << "Informe o segundo numero em binario digito a digito: ";
+    cin >> vet2[i] ;
+    }
+    soma9 = (1)*vet2[7];
+    soma10 = (2)*vet2[6];
+    soma11 = (4)*vet2[5];
+    soma12 = (8)*vet2[4];
+    soma13 = (16)*vet2[3];
+    soma14 = (32)*vet2[2];
+    soma15 = (64)*vet2[1];
+    soma16 = (128)*vet2[0];
+
+    somaVet2=soma9+soma10+soma11+soma12+soma13+soma14+soma15+soma16;
+
+    SomaTotal= somaVet1*somaVet2;
+
+    int vetFinal[9];
+    int a;
+    int num;
+
+    for(int a=8;a>=0;a--){
+
+    if(SomaTotal % 2 ==0){
+
+       vetFinal[a] = 0;
+       SomaTotal=SomaTotal/2;
+
+       }else{
+
+        vetFinal[a] = 1;
+        SomaTotal=SomaTotal/2;
+    }
+
+    }
+    cout << vetFinal[0]<<endl;
+    cout << vetFinal[1]<<endl;
+    cout << vetFinal[2]<<endl;
+    cout << vetFinal[3]<<endl;
+    cout << vetFinal[4]<<endl;
+    cout << vetFinal[5]<<endl;
+    cout << vetFinal[6]<<endl;
+    cout << vetFinal[7]<<endl;
+    cout << vetFinal[8]<<endl;
+
+    }if(OP=="divisao"){
+
+      for(int i=0;i<8;i++){
+    cout << "Informe o primeiro numero em binario digito a digito: ";
+    cin >> vet1[i] ;
+
+    }
+
+    soma1 = (1)*vet1[7];
+    soma2 = (2)*vet1[6];
+    soma3 = (4)*vet1[5];
+    soma4 = (8)*vet1[4];
+    soma5 = (16)*vet1[3];
+    soma6 = (32)*vet1[2];
+    soma7 = (64)*vet1[1];
+    soma8 = (128)*vet1[0];
+
+    somaVet1=soma1+soma2+soma3+soma4+soma5+soma6+soma7+soma8;
+
+    for(int i=0;i<8;i++){
+    cout << "Informe o segundo numero em binario digito a digito: ";
+    cin >> vet2[i] ;
+    }
+    soma9 = (1)*vet2[7];
+    soma10 = (2)*vet2[6];
+    soma11 = (4)*vet2[5];
+    soma12 = (8)*vet2[4];
+    soma13 = (16)*vet2[3];
+    soma14 = (32)*vet2[2];
+    soma15 = (64)*vet2[1];
+    soma16 = (128)*vet2[0];
+
+    somaVet2=soma9+soma10+soma11+soma12+soma13+soma14+soma15+soma16;
+
+    SomaTotal= somaVet1/somaVet2;
+
+    if(somaVet1<somaVet2)
+
+    cout<<"0";else{
+
+    int vetFinal[9];
+    int a;
+    int num;
+
+    for(int a=8;a>=0;a--){
+
+    if(SomaTotal % 2 ==0){
+
+       vetFinal[a] = 0;
+       SomaTotal=SomaTotal/2;
+
+       }else{
+
+        vetFinal[a] = 1;
+        SomaTotal=SomaTotal/2;
+    }
+
+    }
+    cout << vetFinal[0]<<endl;
+    cout << vetFinal[1]<<endl;
+    cout << vetFinal[2]<<endl;
+    cout << vetFinal[3]<<endl;
+    cout << vetFinal[4]<<endl;
+    cout << vetFinal[5]<<endl;
+    cout << vetFinal[6]<<endl;
+    cout << vetFinal[7]<<endl;
+    cout << vetFinal[8]<<endl;
+
+    }
+    }
+
+return 0;
+}
